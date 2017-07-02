@@ -2,6 +2,6 @@ base   yuml
 author Pavel Laupe Dvořák
 email  pavel@laupe.me
 date   2017-07-02
-name   yUML.me plugin
+name   yUML.me Plugin
 desc   Creating class diagram, use case diagram or activity diagram in your page with following syntax in the marker yUML.me
-url    https://github.com/Laupe/dokuwiki-plugin-yuml
+url    https://www.dokuwiki.org/plugin:yuml
