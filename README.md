@@ -21,8 +21,17 @@ This is my first Dokuwiki-plugin. Feedback is appreciated.
 
 As per the original, this plugin currently only supports use case, class diagrams and activity diagrams.
 
-Examples
---------
+Download and Installation
+=========================
+
+Download the plugin from
+[GitHub latest releases](https://github.laupe.cz/Laupe/dokuwiki-plugin-yuml/redirect/zipball/releases/latest)
+and copy the yuml directory to ```/lib/plugins``` of your DokuWiki installation.
+
+Usage & Examples
+================
+
+You can put a [yUML.me](http://yuml.me/) class diagram, use case diagram or activity diagram in your page with following syntax:
 
 usecase
 -------
@@ -35,6 +44,14 @@ https://yuml.me/diagram/scruffy/usecase/samples
 <usecase [plain|nofunky|scruffy[;]][dir:[td|lr][;]][scale:75]>
 	Use case diagram code here!
 </usecase>
+```
+
+```
+<classdiagram>
+  [Customer]+1->*[Order]
+  [Order]++1-items >*[LineItem]
+  [Order]-0..1>[PaymentMethod]
+</classdiagram>
 ```
 
 
@@ -51,6 +68,14 @@ https://yuml.me/diagram/scruffy/class/samples
 </classdiagram>
 ```
 
+```
+<usecase>
+  [User]-(Login)
+  [User]-(Logout) 
+  (Login)<(Reminder) 
+  (Login)>(Captcha)
+</usecase>
+```
 
 activitydiagram
 ---------------
@@ -62,6 +87,16 @@ https://yuml.me/diagram/scruffy/activity/samples
 ```
 <activitydiagram [plain|nofunky|scruffy[;]][dir:[td|lr][;]][scale:75]>
 	Activity diagram code here!
+</activitydiagram>
+```
+
+```
+<activitydiagram>
+  (start)->|a|
+  |a|->(Make Coffee)->|b|
+  |a|->(Make Break)->|b|
+  |b|-><c>[want more coffee]->(Make Coffee)
+  <c>[satisfied]->(end)
 </activitydiagram>
 ```
 
